@@ -3,7 +3,6 @@
 #include <math.h>
 #include <iostream>
 #include <SDL2/SDL.h>
-#include <string>
 
 const size_t sdl = 42;
 
