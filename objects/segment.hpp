@@ -10,6 +10,7 @@ public:
     segment();
     segment(point, point);
     segment(double, double, double, double);
+    double length();
 };
 
 bool operator ==(const segment&, const segment&);

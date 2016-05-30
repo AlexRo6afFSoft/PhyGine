@@ -1,4 +1,5 @@
 #!/bin/bash
+astyle --style=allman ./*.cpp ./objects/*
 git add -A
 git status
 echo --------------------------------------------

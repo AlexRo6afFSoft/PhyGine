@@ -6,8 +6,11 @@ public:
     double x, y;
 
     point();
-    point(double x, double y );
+    point(double, double);
+    double distance(point&);
 };
+
+double distance(point&, point&);
 
 bool operator == (const point&, const point&);
 
