@@ -13,10 +13,12 @@ class segment
     double length();
 };
 
-bool areColiding(segment &, segment &);
+bool are_coliding(segment &, segment &);
 
 bool operator==(segment &, segment &);
 bool operator!=(segment &, segment &);
 bool operator<(segment &, segment &);
 bool operator>(segment &, segment &);
+bool operator<=(segment &, segment &);
+bool operator>=(segment &, segment &);
 #endif

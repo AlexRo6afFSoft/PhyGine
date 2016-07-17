@@ -47,8 +47,23 @@ bool operator>(segment &a, segment &b)
     return a.length() > b.length();
 }
 
-bool areColiding(segment &a, segment &b)
+bool operator<=(segment &a, segment &b)
 {
+    return ((a == b) || (a < b));
+}
+
+bool operator>=(segment &a, segment &b)
+{
+    return ((a == b) || (a > b));
+}
+
+bool are_coliding(segment &a, segment &b)
+{
+    if (oriented_face(a.a.x, a.a.x, a.b.x, a.b.y, b.a.x, b.a.y) * oriented_face(a.a.x, a.a.x, a.b.x, a.b.y, b.b.x, b.b.y) <= EPSILON)
+    {
+        return true;
+    }
+    return false;
 }
 
 #define segment_t
