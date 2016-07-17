@@ -13,6 +13,10 @@ public:
     double length();
 };
 
-bool operator ==(const segment&, const segment&);
+bool areColiding(const segment&, const segment&);
 
+bool operator ==(const segment&, const segment&);
+bool operator !=(const segment&, const segment&);
+bool operator <(const segment&, const segment&);
+bool operator >(const segment&, const segment&);
 #endif

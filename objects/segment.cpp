@@ -28,8 +28,27 @@ double segment::length()
 
 bool operator ==(const segment& s1, const segment& s2)
 {
-    return (((s1.a == s2.a) && (s1.b == s2.b)) ||
-            ((s1.a == s2.b) && (s1.b == s2.a)));
+    return s1.length() == s2.length();
 }
+
+bool operator !=(const segment& s1, const segment& s2)
+{
+    return !(s1 == s2);
+}
+
+bool operator <(const segment& s1, const segment& s2)
+{
+    return s1.length() < s2.length();
+}
+
+bool operator >(const segment& s1 , const segment& s2)
+{
+    return s1.length() > s2.length();
+}
+
+bool areColiding(const segment& s1, const segment& s2)
+{
+}
+
 #define segment_t
 #endif
