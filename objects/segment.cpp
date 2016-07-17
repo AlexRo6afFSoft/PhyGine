@@ -1,12 +1,13 @@
 #ifndef segment_t
 
 #include "segment.hpp"
+#include "defines.cpp"
 #include <math.h>
 
 segment::segment()
 {
-    this->a = point ();
-    this->b = point ();
+    this->a = point();
+    this->b = point();
 }
 
 segment::segment(point a, point b)
@@ -26,27 +27,27 @@ double segment::length()
     return distance(this->a, this->b);
 }
 
-bool operator ==(const segment& s1, const segment& s2)
+bool operator==(segment &a, segment &b)
 {
-    return s1.length() == s2.length();
+    return abs(a.length() - b.length()) < EPSILON;
 }
 
-bool operator !=(const segment& s1, const segment& s2)
+bool operator!=(segment &a, segment &b)
 {
-    return !(s1 == s2);
+    return !(a == b);
 }
 
-bool operator <(const segment& s1, const segment& s2)
+bool operator<(segment &a, segment &b)
 {
-    return s1.length() < s2.length();
+    return a.length() < b.length();
 }
 
-bool operator >(const segment& s1 , const segment& s2)
+bool operator>(segment &a, segment &b)
 {
-    return s1.length() > s2.length();
+    return a.length() > b.length();
 }
 
-bool areColiding(const segment& s1, const segment& s2)
+bool areColiding(segment &a, segment &b)
 {
 }
 

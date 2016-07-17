@@ -4,7 +4,7 @@
 
 class segment
 {
-public:
+  public:
     point a, b;
 
     segment();
@@ -13,10 +13,10 @@ public:
     double length();
 };
 
-bool areColiding(const segment&, const segment&);
+bool areColiding(segment &, segment &);
 
-bool operator ==(const segment&, const segment&);
-bool operator !=(const segment&, const segment&);
-bool operator <(const segment&, const segment&);
-bool operator >(const segment&, const segment&);
+bool operator==(segment &, segment &);
+bool operator!=(segment &, segment &);
+bool operator<(segment &, segment &);
+bool operator>(segment &, segment &);
 #endif

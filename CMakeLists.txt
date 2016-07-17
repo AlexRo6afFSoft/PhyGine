@@ -8,7 +8,3 @@ include_directories(
 
 set(CMAKE_C_FLAGS_INIT "-stg=gnu11")
 set(CMAKE_CXX_FLAGS_INIT "-std=gnu++1z")
-
-add_executable(main.exe
-	main.cpp
-)

@@ -1,6 +1,7 @@
 #ifndef point_t
 
 #include "point.hpp"
+#include "defines.cpp"
 #include <math.h>
 
 point::point()
@@ -15,24 +16,22 @@ point::point(double x, double y)
     this->y = y;
 }
 
-double point::distance(point& p1)
+double point::distance(point &p1)
 {
     double distance_x = abs(this->x - p1.x);
     double distance_y = abs(this->y - p1.y);
     return sqrt((distance_x * distance_x) + (distance_y * distance_y));
 }
 
-double distance(point& p1, point& p2)
+double distance(point &p1, point &p2)
 {
     return p1.distance(p2);
 }
 
-bool operator == (const point& point_1, const point& point_2)
+bool operator==(point &point_1, point &point_2)
 {
-    return (abs (point_1.x - point_2.x) <= 0.001) && (abs (point_1.y - point_2.y) <= 0.001);
+    return (abs(point_1.x - point_2.x) <= EPSILON) && (abs(point_1.y - point_2.y) <= EPSILON);
 }
-
-
 
 #define point_t
 #endif
